@@ -1,0 +1,236 @@
+* {
+    /* для всех селекторов*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #eebeea 0%, #30bbfc 100%);
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+    background: rgba(241, 214, 237, 0.986);
+    border-radius: 13px;
+    box-shadow: 0 10px 30px rgb(10, 26, 71);
+}
+
+h1 {
+    text-align: center;
+    color: #17022bb6;
+    margin-bottom: 30px;
+    font-style: 2.5em;
+}
+
+.task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    /* wrap - обертка, резиновая верстка, при сжатии экрана и страницы выглядит лучше, адаптив*/
+}
+
+#taskInput {
+    min-width: 200px;
+    flex-grow: 1;
+    /* занимает все место или flex grow 1 одно и то же чтобы хедер и футер прижимались к краям страницы*/
+    padding: 10px;
+   border: 3px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    /* или 16px это идентичные показатели */
+    transition: all .3s;
+    /* .3s то же самое что и 0.3S */
+    outline: none;
+}
+
+#taskInput:focus {
+    border-color: #667eaa;
+    outline: none;
+    /* outline внешняя обводка в инпутах при нажатии по умолчанию черный убрать на none если не нужен  */
+    
+}
+
+
+#prioritySelect {
+    padding: 10px;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    min-width: 120px;
+    outline: none;
+}
+
+#prioritySelect:focus {
+    border-color: #667eaa;
+}
+
+button {
+    padding: 10px 20px;
+    background: #82c3e9e8;
+    color: #fff;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: #228bee;
+}
+
+.filters {
+    /* position: relative;
+    z-index: 2; */
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.active {
+    background: #55946f;
+}
+
+.task-list {
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: #ffffffdc;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.stats p {
+    padding: 10px 30px;
+    border-radius: 8px;
+    color: #17022bb6;
+}
+
+option[value='3low'] {
+    background-color: #89d0e6;
+}
+
+option[value='2medium'] {
+    background-color: #e6f08d;
+}
+
+option[value='1high'] {
+    background-color: #f2b7a5;
+}
+
+.task-item {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 10px;
+    align-items: center;
+    padding: 15px;
+    background: #edc8f7;
+    margin-bottom: 10px;
+    /* //отступы внизу bottom top вверху */
+    border-radius: 8px;
+    border-left: 6px solid #000;
+    transition: all 0.3 ease;
+}
+
+/* hover наш активный элемент на который навели курсор */
+.task-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(34, 2, 29, 0.208);
+}
+
+.task-item.low {
+    background-color: #eef4ad;
+    border-color: #dee185;
+}
+
+.task-item.medium {
+    background-color: #adcef4;
+    border-color: #7d8cfa;
+}
+
+.task-item.high {
+    background-color: #f4adb5;
+    border-color: #b2696e;
+}
+
+.overdue {
+    border: 6px solid #1801016c;
+}
+
+.completed {
+    opacity: 0.7;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+}
+
+.task-text {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.delete-btn {
+    background-color: #6f7277;
+}
+
+.delete-btn:hover {
+    background-color: #82807b;
+}
+
+.task-checkbox {
+    transform: scale(1.5);
+    margin-right: 20px;
+}
+.edit-btn:hover {
+    /* box-shadow: 5px 3px 3px 1px #00000094; */
+    cursor: pointer;
+}
+
+.task-actions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.edit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-input{
+    border: none;
+    background-color: #c1d9f5da;
+    border-radius: 8px;
+    width: 200px;
+    height: 38px;
+    text-align: center;
+}
+
+#taskTime{
+    text-align: center;
+    width: 70px;
+    border-radius: 8px;
+    border: 3px solid #ddd;
+    font-size: 1em;
+    /* или 16px это идентичные показатели */
+    transition: all .3s;
+    /* .3s то же самое что и 0.3S */
+    outline: none;
+
+}
+#taskTime:focus {
+    border: #b2f3aa;
+}

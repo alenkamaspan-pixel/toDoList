@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🦄To Do List🦄</h1>
+        <form action="#" class="task-form">
+            <input type="text" placeholder="Add new task here.." id="taskInput">
+            <select id="prioritySelect">
+                <option value="3low">Низкий</option>
+                <option value="2medium">Средний</option>
+                <option value="1high">Высокий</option>
+            </select>
+            <input 
+            type="number" 
+            name="" 
+            id="taskTime" 
+            value="1" 
+            min="0"
+            step="0.5"
+            placeholder="Время(часы)"
+            >
+
+            <button id="addTask">Add task</button> 
+        </form>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="pending">Активные</button>
+            <button class="filter-btn" data-filter="completed">Выполненные</button>
+            <button class="filter-btn" data-filter="overdue">Просроченные</button>
+        </div>
+        <div class="task-list" id="taskList"></div>
+        <div class="stats">
+            <p>Всего задач: <span id="totalTasks"></span></p>
+            <p>Выполнено: <span id="completedTasks"></span></p>
+            <p>Осталось: <span id="pendingTasks"></span></p>
+            <p>Просрочено: <span id="overdueTasks"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
